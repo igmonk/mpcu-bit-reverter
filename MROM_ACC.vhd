@@ -67,7 +67,7 @@ signal ROM: tROM := (
 	"0001"&"000010", -- 00001 -- STORE ADR_I         -- RAM[ADR_I] = ACC -- Init array index (index = 0)
 	"0000"&"000011", -- 00010 -- LOAD ADR_LEN        -- ACC = RAM[ADR_LEN] = RAM[3] = 5
 	"0101"&"000010", -- 00011 -- SUB ADR_I           -- ACC = ACC - RAM[ADR_I]
-	"0111"&"000000", -- 00100 -- JZ                  -- Jump to HALT if zf is set (end of array)
+	"0111"&"010010", -- 00100 -- JZ                  -- Jump to HALT if zf is set (end of array)
 	"0000"&"000100", -- 00101 -- LOAD ADR_START      -- ACC = RAM[ADR_START] = RAM[4] = 16 (address of a[0]) 
 	"0100"&"000010", -- 00110 -- ADD ADR_I           -- ACC = ACC + RAM[ADR_I] (address of current a[i])
 	"0001"&"000101", -- 00111 -- STORE ADR_CUR       -- RAM[ADR_CUR] = ACC
@@ -80,7 +80,7 @@ signal ROM: tROM := (
 	"0000"&"000010", -- 01110 -- LOAD ADR_I          -- ACC = RAM[ADR_I]
 	"0100"&"000001", -- 01111 -- ADD ADR_ONE         -- ACC = ACC + 1
 	"0001"&"000010", -- 10000 -- STORE ADR_I         -- RAM[ADR_I] = ACC
-	"1000"&"000000", -- 10001 -- JMP                 -- Jump to 00010
+	"1000"&"000010", -- 10001 -- JMP                 -- Jump to 00010
 	"1001"&"000000", -- 10010 -- HALT                -- End of execution.
 	"1111"&"111111", -- 10011
 	"1111"&"111111", -- 10100
