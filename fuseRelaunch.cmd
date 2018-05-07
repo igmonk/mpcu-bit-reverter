@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/igor/Projects/mpcu_bit_reverter/MRAM_GPR_TB_isim_beh.exe" -prj "C:/Users/igor/Projects/mpcu_bit_reverter/MRAM_GPR_TB_beh.prj" "work.MRAM_GPR_TB" 
+-intstyle "ise" -incremental -o "C:/Users/igor/Projects/mpcu_bit_reverter/MROM_GPR_TB_isim_beh.exe" -prj "C:/Users/igor/Projects/mpcu_bit_reverter/MROM_GPR_TB_beh.prj" "work.MROM_GPR_TB" 
