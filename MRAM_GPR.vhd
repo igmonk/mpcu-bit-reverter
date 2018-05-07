@@ -32,8 +32,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --use UNISIM.VComponents.all;
 
 entity MRAM_GPR is
-    Port ( --CLK : in  STD_LOGIC; -- DELETE check, maybe it's needless
-           RW : in  STD_LOGIC;
+    Port ( RW : in  STD_LOGIC;
            ADR1 : in  STD_LOGIC_VECTOR (5 downto 0);
            ADR2 : in  STD_LOGIC_VECTOR (5 downto 0);
            ADRW : in  STD_LOGIC_VECTOR (5 downto 0);
