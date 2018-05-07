@@ -74,7 +74,7 @@ signal ROM: tROM := (
 	"0000"&"000110", -- 01000 -- LOAD ADR_RES_START  -- ACC = RAM[ADR_RES_START] = RAM[6] = 24 (address of res[0])
 	"0100"&"000010", -- 01001 -- ADD ADR_I           -- ACC = ACC + RAM[ADR_I] (address of current res[i])
 	"0001"&"000111", -- 01010 -- STORE ADR_RES_CUR   -- RAM[ADR_RES_CUR] = ACC
-	"0010"&"000101", -- 01011 -- LOADIN ADR_RES_CUR  -- ACC = RAM[RAM[ADR_CUR]] = a[i]
+	"0010"&"000101", -- 01011 -- LOADIN ADR_CUR  -- ACC = RAM[RAM[ADR_CUR]] = a[i]
 	"0110"&"000000", -- 01100 -- REVERT              -- Revert bits of a[i]
 	"0011"&"000111", -- 01101 -- STOREIN ADR_RES_CUR -- RAM[RAM[ADR_RES_CUR]] = ACC (store reverted value to res[i])
 	"0000"&"000010", -- 01110 -- LOAD ADR_I          -- ACC = RAM[ADR_I]
