@@ -681,7 +681,7 @@ extern void work_a_0435259162_3212880686_init()
 {
 	static char *pe[] = {(void *)work_a_0435259162_3212880686_p_0,(void *)work_a_0435259162_3212880686_p_1,(void *)work_a_0435259162_3212880686_p_2,(void *)work_a_0435259162_3212880686_p_3,(void *)work_a_0435259162_3212880686_p_4,(void *)work_a_0435259162_3212880686_p_5,(void *)work_a_0435259162_3212880686_p_6};
 	static char *se[] = {(void *)work_a_0435259162_3212880686_sub_3874760282_3057020925};
-	xsi_register_didat("work_a_0435259162_3212880686", "isim/DATA_PATH_ACC_TB_isim_beh.exe.sim/work/a_0435259162_3212880686.didat");
+	xsi_register_didat("work_a_0435259162_3212880686", "isim/TOP_ACC_TB_isim_beh.exe.sim/work/a_0435259162_3212880686.didat");
 	xsi_register_executes(pe);
 	xsi_register_subprogram_executes(se);
 }

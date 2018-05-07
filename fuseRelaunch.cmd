@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/igor/Projects/mpcu_bit_reverter/DATA_PATH_ACC_TB_isim_beh.exe" -prj "C:/Users/igor/Projects/mpcu_bit_reverter/DATA_PATH_ACC_TB_beh.prj" "work.DATA_PATH_ACC_TB" 
+-intstyle "ise" -incremental -o "C:/Users/igor/Projects/mpcu_bit_reverter/TOP_ACC_TB_isim_beh.exe" -prj "C:/Users/igor/Projects/mpcu_bit_reverter/TOP_ACC_TB_beh.prj" "work.TOP_ACC_TB" 
