@@ -54,7 +54,7 @@ architecture Behavioral of MRAM is
 subtype byte is std_logic_vector(7 downto 0);
 
 -- 2D array type
-type tRAM is array(0 to 31) of byte;
+type tRAM is array(0 to 63) of byte;
 
 -- 2D RAM init
 signal RAM: tRAM := (
