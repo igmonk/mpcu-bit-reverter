@@ -56,7 +56,7 @@ type tROM is array (0 to 15) of inst;
 -- HALT     111
 signal ROM: tROM := (
 	"000"&"000000"&"000000"&"000010", -- 0000 -- ADD ADR_ZERO ADR_ZERO ADR_I
-	"001"&"000011"&"000010"&"001001", -- 0001 -- SUM ADR_LEN ADR_I ADR_TMP_1 (maybe TMP1 is needless)
+	"001"&"000011"&"000010"&"001001", -- 0001 -- SUB ADR_LEN ADR_I ADR_TMP_1 (maybe TMP1 is needless)
 	"101"&"001010"&"000000"&"000000", -- 0010 -- Jump to HALT if zf is set (end of array)
 	"000"&"000100"&"000010"&"000101", -- 0011 -- ADD ADR_START ADR_I ADR_CUR
 	"000"&"000110"&"000010"&"000111", -- 0100 -- ADD ADR_RES_START ADR_I ADR_RES_CUR
