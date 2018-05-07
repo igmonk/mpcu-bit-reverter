@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --use UNISIM.VComponents.all;
 
 entity MRAM_GPR is
-    Port ( CLK : in  STD_LOGIC;
+    Port ( --CLK : in  STD_LOGIC; -- DELETE check, maybe it's needless
            RW : in  STD_LOGIC;
            ADR1 : in  STD_LOGIC_VECTOR (5 downto 0);
            ADR2 : in  STD_LOGIC_VECTOR (5 downto 0);
@@ -95,28 +95,24 @@ begin
 
 	-- Write process
 	d_in_w <= DINW;
-	WRITE: process(CLK)
+	WRITE: process(RW, ADRW, d_in_w)
 	begin
-		if rising_edge(CLK) then
-			if RW = '0' then
-				RAM(CONV_INTEGER(ADRW)) <= d_in_w;
-			end if;
+		if RW = '0' then
+			RAM(CONV_INTEGER(ADRW)) <= d_in_w;
 		end if;
 	end process;
 	
 	-- Read process
 	d_out_1 <= RAM(CONV_INTEGER(ADR1));
 	d_out_2 <= RAM(CONV_INTEGER(ADR2));
-	ZBUFS: process (CLK)
+	ZBUFS: process (RW, d_out_1, d_out_2)
 	begin
-		if rising_edge(CLK) then
-			if RW = '1' then
-				DOUT1 <= d_out_1;
-				DOUT2 <= d_out_2;
-			else
-				DOUT1 <= (others => 'Z');
-				DOUT2 <= (others => 'Z');
-			end if;
+		if RW = '1' then
+			DOUT1 <= d_out_1;
+			DOUT2 <= d_out_2;
+		else
+			DOUT1 <= (others => 'Z');
+			DOUT2 <= (others => 'Z');
 		end if;
 	end process;
 
